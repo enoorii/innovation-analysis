@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+build/
+dist/
+wheels/
+*.egg-info/
+images/
+
+# Virtual environments
+.venv/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Local migration data and generated assets
+/data/*
+!/data/.gitkeep
+!/data/knowledge
+!/data/processed
+!/data/raw
+/images/*
+!/images/.gitkeep
+
+# Optional local copy of the legacy snapshot
+/source-snapshot/
+
+# Logs
+*.log

@@ -1,0 +1,47 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [{ name = "enoorii", email = "esmaeilnoori1379@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "aiosqlite>=0.22.1",
+    "chromadb>=1.5.9",
+    "fastapi>=0.163.1",
+    "granian[reload]>=2.8.8",
+    # uvloop has no Windows build — keep it POSIX-only so `uv sync` works everywhere.
+    "granian[uvloop]>=2.8.8; sys_platform != 'win32'",
+    "nbformat>=5.11.1",
+    "openai>=3.52.0",
+    "openpyxl>=3.1.5",
+    "pandas>=3.1.1",
+    "plotly>=7.1.0",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.3",
+    "sse-starlette>=3.7.0",
+    "statsmodels>=0.15.0",
+    "tiktoken>=0.14.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "ipython>=9.18.1",
+    "poethepoet>=0.49.0",
+    "pytest>=9.2.0",
+]
+
+[tool.basedpyright]
+typeCheckingMode = "basic"
+
+[tool.uv]
+override-dependencies = [
+    "torch; sys_platform == 'never'",
+]
+
+[tool.poe.tasks]
+dev = "granian --interface asgi app.main:app --host 127.0.0.1 --port 9123"
+test = "pytest -q"
+typecheck = "basedpyright src"
+hello = "echo Hello from poe!"

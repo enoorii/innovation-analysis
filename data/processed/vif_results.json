@@ -1,0 +1,545 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-19T19:24:43.294662+00:00",
+    "vif_threshold": 5.0,
+    "candidate_pool": [
+      "rd_pct_gdp",
+      "gdp_ppp_percapita",
+      "patents_total",
+      "journal_articles",
+      "gov_debt_pct_gdp",
+      "gini_index"
+    ],
+    "note": "log_hitech_exports_usd is the primary specification; levels shown in notebook"
+  },
+  "results": {
+    "Italy": {
+      "levels": {
+        "status": "ok",
+        "target": "hitech_exports_usd",
+        "n_obs": 22,
+        "final_features": [
+          "gdp_ppp_percapita",
+          "patents_total",
+          "gov_debt_pct_gdp",
+          "gini_index"
+        ],
+        "removal_history": [
+          {
+            "iteration": 1,
+            "dropped": "journal_articles",
+            "vif": 61.6677805728388,
+            "remaining": 5
+          },
+          {
+            "iteration": 2,
+            "dropped": "rd_pct_gdp",
+            "vif": 14.160950932592488,
+            "remaining": 4
+          }
+        ],
+        "vif_initial": [
+          {
+            "feature": "journal_articles",
+            "VIF": 61.6677805728388
+          },
+          {
+            "feature": "gov_debt_pct_gdp",
+            "VIF": 34.57010606143329
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 16.028441139203874
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "VIF": 14.34662655147393
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 2.864129540783088
+          },
+          {
+            "feature": "patents_total",
+            "VIF": 1.5295033911425406
+          }
+        ],
+        "vif_final": [
+          {
+            "feature": "gov_debt_pct_gdp",
+            "VIF": 4.050481724987609
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 2.6108411748941633
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 2.3574128175219844
+          },
+          {
+            "feature": "patents_total",
+            "VIF": 1.0516071584530535
+          }
+        ],
+        "fit": {
+          "r_squared": 0.9182493599170508,
+          "adj_r_squared": 0.899013915191651,
+          "aic": 1031.3848057147861,
+          "bic": 1036.8400179815778,
+          "f_stat": 47.73736053549781,
+          "f_pvalue": 5.022386513524744e-09,
+          "dw": 0.9391827747278113,
+          "omnibus_p": 0.8580459789028052
+        },
+        "coefficients": [
+          {
+            "feature": "const",
+            "coef": -35667371357.419586,
+            "se_std": 49174909439.548706,
+            "p_std": 0.4781243052290548,
+            "se_hc3": 58474243848.156685,
+            "p_hc3": 0.541883529062881,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "coef": 1143613.752599118,
+            "se_std": 113104.59351609931,
+            "p_std": 1.3164332452842675e-08,
+            "se_hc3": 168942.17129900618,
+            "p_hc3": 1.2944131252405463e-11,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "patents_total",
+            "coef": -258777.2530427985,
+            "se_std": 925953.8638685007,
+            "p_std": 0.7832550911726649,
+            "se_hc3": 893985.784337197,
+            "p_hc3": 0.7722258526553136,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gov_debt_pct_gdp",
+            "coef": -214376133.81189668,
+            "se_std": 100813155.83918396,
+            "p_std": 0.04840911274453061,
+            "se_hc3": 119331519.94961977,
+            "p_hc3": 0.07241894995730247,
+            "sig5_std": true,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gini_index",
+            "coef": 1504631478.1317148,
+            "se_std": 1546104335.2523835,
+            "p_std": 0.3441107077298648,
+            "se_hc3": 1823898599.491301,
+            "p_hc3": 0.4093980079620787,
+            "sig5_std": false,
+            "sig5_hc3": false
+          }
+        ]
+      },
+      "log": {
+        "status": "ok",
+        "target": "log_hitech_exports_usd",
+        "n_obs": 22,
+        "final_features": [
+          "gdp_ppp_percapita",
+          "patents_total",
+          "gov_debt_pct_gdp",
+          "gini_index"
+        ],
+        "removal_history": [
+          {
+            "iteration": 1,
+            "dropped": "journal_articles",
+            "vif": 61.6677805728388,
+            "remaining": 5
+          },
+          {
+            "iteration": 2,
+            "dropped": "rd_pct_gdp",
+            "vif": 14.160950932592488,
+            "remaining": 4
+          }
+        ],
+        "vif_initial": [
+          {
+            "feature": "journal_articles",
+            "VIF": 61.6677805728388
+          },
+          {
+            "feature": "gov_debt_pct_gdp",
+            "VIF": 34.57010606143329
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 16.028441139203874
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "VIF": 14.34662655147393
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 2.864129540783088
+          },
+          {
+            "feature": "patents_total",
+            "VIF": 1.5295033911425406
+          }
+        ],
+        "vif_final": [
+          {
+            "feature": "gov_debt_pct_gdp",
+            "VIF": 4.050481724987609
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 2.6108411748941633
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 2.3574128175219844
+          },
+          {
+            "feature": "patents_total",
+            "VIF": 1.0516071584530535
+          }
+        ],
+        "fit": {
+          "r_squared": 0.9330314240417368,
+          "adj_r_squared": 0.9172741120515572,
+          "aic": -47.03512103278348,
+          "bic": -41.5799087659919,
+          "f_stat": 59.21260076739162,
+          "f_pvalue": 9.349595209003189e-10,
+          "dw": 1.1758665256751066,
+          "omnibus_p": 0.7925550707652391
+        },
+        "coefficients": [
+          {
+            "feature": "const",
+            "coef": 22.666303835315674,
+            "se_std": 1.1152800841415251,
+            "p_std": 2.3021505759137325e-13,
+            "se_hc3": 1.4107768232528721,
+            "p_hc3": 4.378456558597811e-58,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "coef": 2.707579179146225e-05,
+            "se_std": 2.5651963981448234e-06,
+            "p_std": 6.974141987818459e-09,
+            "se_hc3": 3.534460707533592e-06,
+            "p_hc3": 1.851879279257213e-14,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "patents_total",
+            "coef": -2.7238868456912462e-05,
+            "se_std": 2.100050442341819e-05,
+            "p_std": 0.2119394175970191,
+            "se_hc3": 1.9579227504888338e-05,
+            "p_hc3": 0.16416096050701168,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gov_debt_pct_gdp",
+            "coef": -0.00335487618131336,
+            "se_std": 0.002286428306799737,
+            "p_std": 0.16055134085754982,
+            "se_hc3": 0.0027232307349422096,
+            "p_hc3": 0.21796884902158165,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gini_index",
+            "coef": 0.03262160064580799,
+            "se_std": 0.03506543057759172,
+            "p_std": 0.36523578567635534,
+            "se_hc3": 0.04445970229269087,
+            "p_hc3": 0.4631107976730876,
+            "sig5_std": false,
+            "sig5_hc3": false
+          }
+        ]
+      }
+    },
+    "Finland": {
+      "levels": {
+        "status": "ok",
+        "target": "hitech_exports_usd",
+        "n_obs": 22,
+        "final_features": [
+          "rd_pct_gdp",
+          "gdp_ppp_percapita",
+          "patents_total",
+          "gini_index"
+        ],
+        "removal_history": [
+          {
+            "iteration": 1,
+            "dropped": "journal_articles",
+            "vif": 22.626879674496077,
+            "remaining": 5
+          },
+          {
+            "iteration": 2,
+            "dropped": "gov_debt_pct_gdp",
+            "vif": 13.445248543283748,
+            "remaining": 4
+          }
+        ],
+        "vif_initial": [
+          {
+            "feature": "journal_articles",
+            "VIF": 22.626879674496077
+          },
+          {
+            "feature": "gov_debt_pct_gdp",
+            "VIF": 13.976322130175586
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 12.1954495289496
+          },
+          {
+            "feature": "patents_total",
+            "VIF": 11.451350257348412
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 3.5843959063354043
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "VIF": 3.0876782300698538
+          }
+        ],
+        "vif_final": [
+          {
+            "feature": "patents_total",
+            "VIF": 2.6169138306876327
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "VIF": 2.279375642408667
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 1.3851627981151005
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 1.3131335271186817
+          }
+        ],
+        "fit": {
+          "r_squared": 0.8175778599326357,
+          "adj_r_squared": 0.774655003446197,
+          "aic": 1009.8216669562769,
+          "bic": 1015.2768792230685,
+          "f_stat": 19.047610687116002,
+          "f_pvalue": 4.163841019210566e-06,
+          "dw": 1.708522632337474,
+          "omnibus_p": 0.0004267974524962198
+        },
+        "coefficients": [
+          {
+            "feature": "const",
+            "coef": -137421443236.03279,
+            "se_std": 38268845134.45779,
+            "p_std": 0.0022527281609889776,
+            "se_hc3": 34535699752.15333,
+            "p_hc3": 6.91729321274499e-05,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "coef": -1941623999.5793488,
+            "se_std": 2198598144.109339,
+            "p_std": 0.38948987263232143,
+            "se_hc3": 2999160509.4575567,
+            "p_hc3": 0.5173801105342065,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "coef": -168032.28765137735,
+            "se_std": 47369.96908348941,
+            "p_std": 0.002476876750924983,
+            "se_hc3": 38870.59260899917,
+            "p_hc3": 1.5401664243422314e-05,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "patents_total",
+            "coef": 7956842.149317611,
+            "se_std": 2969475.5827063094,
+            "p_std": 0.015836445291744394,
+            "se_hc3": 3634253.2770693693,
+            "p_hc3": 0.02856761931883206,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "gini_index",
+            "coef": 5268960088.282963,
+            "se_std": 1446564827.5066063,
+            "p_std": 0.002014697892839532,
+            "se_hc3": 1211303589.4160864,
+            "p_hc3": 1.362454732861086e-05,
+            "sig5_std": true,
+            "sig5_hc3": true
+          }
+        ]
+      },
+      "log": {
+        "status": "ok",
+        "target": "log_hitech_exports_usd",
+        "n_obs": 22,
+        "final_features": [
+          "rd_pct_gdp",
+          "gdp_ppp_percapita",
+          "patents_total",
+          "gini_index"
+        ],
+        "removal_history": [
+          {
+            "iteration": 1,
+            "dropped": "journal_articles",
+            "vif": 22.626879674496077,
+            "remaining": 5
+          },
+          {
+            "iteration": 2,
+            "dropped": "gov_debt_pct_gdp",
+            "vif": 13.445248543283748,
+            "remaining": 4
+          }
+        ],
+        "vif_initial": [
+          {
+            "feature": "journal_articles",
+            "VIF": 22.626879674496077
+          },
+          {
+            "feature": "gov_debt_pct_gdp",
+            "VIF": 13.976322130175586
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 12.1954495289496
+          },
+          {
+            "feature": "patents_total",
+            "VIF": 11.451350257348412
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 3.5843959063354043
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "VIF": 3.0876782300698538
+          }
+        ],
+        "vif_final": [
+          {
+            "feature": "patents_total",
+            "VIF": 2.6169138306876327
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "VIF": 2.279375642408667
+          },
+          {
+            "feature": "gini_index",
+            "VIF": 1.3851627981151005
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "VIF": 1.3131335271186817
+          }
+        ],
+        "fit": {
+          "r_squared": 0.8705392846525464,
+          "adj_r_squared": 0.8400779398649102,
+          "aic": -5.400055372840086,
+          "bic": 0.05515689395149437,
+          "f_stat": 28.578491551229433,
+          "f_pvalue": 2.3846837596838246e-07,
+          "dw": 1.790243566683871,
+          "omnibus_p": 0.020270732624830604
+        },
+        "coefficients": [
+          {
+            "feature": "const",
+            "coef": 5.934074277720171,
+            "se_std": 3.6498314816544637,
+            "p_std": 0.1223747647569721,
+            "se_hc3": 3.6599177372180045,
+            "p_hc3": 0.10493869391900117,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "rd_pct_gdp",
+            "coef": -0.03714685477304891,
+            "se_std": 0.20968787256796423,
+            "p_std": 0.8614816820015769,
+            "se_hc3": 0.2746072455332683,
+            "p_hc3": 0.892396294151667,
+            "sig5_std": false,
+            "sig5_hc3": false
+          },
+          {
+            "feature": "gdp_ppp_percapita",
+            "coef": -1.7467010236765876e-05,
+            "se_std": 4.517836998698548e-06,
+            "p_std": 0.001239243770712698,
+            "se_hc3": 4.231621159983349e-06,
+            "p_hc3": 3.6635415839580995e-05,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "patents_total",
+            "coef": 0.0008689161627474552,
+            "se_std": 0.00028320910724339996,
+            "p_std": 0.006964226320576183,
+            "se_hc3": 0.0003436744983063384,
+            "p_hc3": 0.011461263570998444,
+            "sig5_std": true,
+            "sig5_hc3": true
+          },
+          {
+            "feature": "gini_index",
+            "coef": 0.5845472148184712,
+            "se_std": 0.1379638666684964,
+            "p_std": 0.0005555214521353397,
+            "se_hc3": 0.1304503402166139,
+            "p_hc3": 7.429613892728346e-06,
+            "sig5_std": true,
+            "sig5_hc3": true
+          }
+        ]
+      }
+    }
+  }
+}

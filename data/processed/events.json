@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-19T19:46:32.449904+00:00",
+    "schema_version": 1,
+    "note": "Chart annotations. Frontend filters by `features` array and `countries` array before rendering. Range events (start != end) render as vrect bands; point events as vline."
+  },
+  "events": [
+    {
+      "id": "gfc",
+      "start": 2007,
+      "end": 2009,
+      "label": "Global Financial Crisis",
+      "description": "Financial crisis → global trade collapse. Finland hi-tech exports fell ~48% in 2009.",
+      "severity": "high",
+      "features": [
+        "hitech_exports_usd",
+        "log_hitech_exports_usd",
+        "rd_pct_gdp",
+        "gii_score"
+      ],
+      "countries": [
+        "Italy",
+        "Finland"
+      ]
+    },
+    {
+      "id": "nokia-decline",
+      "start": 2009,
+      "end": 2014,
+      "label": "Nokia decline → Microsoft acquisition",
+      "description": "Nokia (~20% of Finland exports in 2007) collapsed; mobile business sold to Microsoft in 2013–14. Finland hi-tech exports halved; R&D intensity fell 3.7% → 2.75%.",
+      "severity": "high",
+      "features": [
+        "hitech_exports_usd",
+        "rd_pct_gdp",
+        "patents_total"
+      ],
+      "countries": [
+        "Finland"
+      ]
+    },
+    {
+      "id": "eurozone",
+      "start": 2011,
+      "end": 2013,
+      "label": "Eurozone sovereign debt crisis",
+      "description": "Italian spreads spiked, GDP fell. R&D% rose mechanically (GDP in denominator) while exports stagnated.",
+      "severity": "medium",
+      "features": [
+        "hitech_exports_usd",
+        "rd_pct_gdp",
+        "gov_debt_pct_gdp"
+      ],
+      "countries": [
+        "Italy"
+      ]
+    },
+    {
+      "id": "covid",
+      "start": 2020,
+      "end": 2021,
+      "label": "COVID-19 pandemic",
+      "description": "Trade disruption; both countries saw export volatility and GII declines.",
+      "severity": "high",
+      "features": [
+        "hitech_exports_usd",
+        "gii_score",
+        "gdp_ppp_percapita"
+      ],
+      "countries": [
+        "Italy",
+        "Finland"
+      ]
+    },
+    {
+      "id": "italy-surge",
+      "start": 2022,
+      "end": 2024,
+      "label": "Italy export surge (+55% in 3y)",
+      "description": "EUR/USD swing + defence/electronics boom. Italy hi-tech exports rose from $45B → $60B.",
+      "severity": "medium",
+      "features": [
+        "hitech_exports_usd"
+      ],
+      "countries": [
+        "Italy"
+      ]
+    },
+    {
+      "id": "gii-start-italy",
+      "start": 2011,
+      "end": 2011,
+      "label": "GII first published (Italy)",
+      "description": "Global Innovation Index data begins for Italy in 2011.",
+      "severity": "low",
+      "features": [
+        "gii_score"
+      ],
+      "countries": [
+        "Italy"
+      ]
+    },
+    {
+      "id": "gii-start-finland",
+      "start": 2013,
+      "end": 2013,
+      "label": "GII first published (Finland)",
+      "description": "Global Innovation Index data begins for Finland in 2013.",
+      "severity": "low",
+      "features": [
+        "gii_score"
+      ],
+      "countries": [
+        "Finland"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-19T19:24:43.311300+00:00",
+    "model": "hitech_exports_usd ~ Σ rd_pct_gdp_{t-L} + gdp_ppp_percapita",
+    "n_lags": 5,
+    "control": "gdp_ppp_percapita",
+    "warning": "All series I(1); levels DLM has spurious-regression risk. ARDL/VECM required for causal claim."
+  },
+  "results": {
+    "Italy": {
+      "status": "ok",
+      "n_obs": 17,
+      "n_lags": 5,
+      "fit": {
+        "r_squared": 0.9814770539825192,
+        "adj_r_squared": 0.9670703181911452,
+        "aic": 780.5929363066554,
+        "dw": 1.9798353058862963,
+        "omnibus_p": 0.312334181507994
+      },
+      "lag_table": [
+        {
+          "lag": 0,
+          "coef": -66632325480.08224,
+          "p_std": 0.010557173170968878,
+          "p_hc3": 0.05626863658375417,
+          "sig5_std": true,
+          "sig5_hc3": false,
+          "sig10_hc3": true
+        },
+        {
+          "lag": 1,
+          "coef": -333076192.8790577,
+          "p_std": 0.9877565050013869,
+          "p_hc3": 0.9914905874845812,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 2,
+          "coef": -9099270846.580496,
+          "p_std": 0.6761262360299933,
+          "p_hc3": 0.7918030297081764,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 3,
+          "coef": -52317041488.57296,
+          "p_std": 0.03484216333715482,
+          "p_hc3": 0.10891029567829269,
+          "sig5_std": true,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 4,
+          "coef": 60094261055.99109,
+          "p_std": 0.023055377579803204,
+          "p_hc3": 0.057337421323861146,
+          "sig5_std": true,
+          "sig5_hc3": false,
+          "sig10_hc3": true
+        },
+        {
+          "lag": 5,
+          "coef": 50411012464.181946,
+          "p_std": 0.05415875616928242,
+          "p_hc3": 0.13592950625177386,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        }
+      ],
+      "most_significant_lag": {
+        "lag": 0,
+        "coef": -66632325480.08224,
+        "p_hc3": 0.05626863658375417
+      },
+      "lag_vifs": [
+        {
+          "feature": "rd_lag0",
+          "VIF": 24.83464000548651
+        },
+        {
+          "feature": "rd_lag1",
+          "VIF": 13.91112772899279
+        },
+        {
+          "feature": "rd_lag2",
+          "VIF": 17.871951371503293
+        },
+        {
+          "feature": "rd_lag3",
+          "VIF": 21.928703051512148
+        },
+        {
+          "feature": "rd_lag4",
+          "VIF": 27.408777840309018
+        },
+        {
+          "feature": "rd_lag5",
+          "VIF": 36.912163616080484
+        }
+      ],
+      "robustness": {
+        "model": "rd_lag0 + gdp_ppp_percapita",
+        "coef": -32843279856.477657,
+        "p_hc3": 0.001956670509173461
+      }
+    },
+    "Finland": {
+      "status": "ok",
+      "n_obs": 17,
+      "n_lags": 5,
+      "fit": {
+        "r_squared": 0.9071532650263625,
+        "adj_r_squared": 0.8349391378246445,
+        "aic": 733.2097376760444,
+        "dw": 1.5846753851253765,
+        "omnibus_p": 0.8808944594376688
+      },
+      "lag_table": [
+        {
+          "lag": 0,
+          "coef": 4733532219.987107,
+          "p_std": 0.01948400576177747,
+          "p_hc3": 0.15391667739621837,
+          "sig5_std": true,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 1,
+          "coef": 583411293.9770553,
+          "p_std": 0.8432353175378937,
+          "p_hc3": 0.8983902619439865,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 2,
+          "coef": -3774260785.7437706,
+          "p_std": 0.2129421457678956,
+          "p_hc3": 0.39382732796744524,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 3,
+          "coef": 1563711296.8779345,
+          "p_std": 0.5946272080383419,
+          "p_hc3": 0.6770648720745699,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 4,
+          "coef": -1440474496.7234502,
+          "p_std": 0.6238006091088836,
+          "p_hc3": 0.7204845511344304,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        },
+        {
+          "lag": 5,
+          "coef": 893847606.4966017,
+          "p_std": 0.6686064138182396,
+          "p_hc3": 0.7508664572359188,
+          "sig5_std": false,
+          "sig5_hc3": false,
+          "sig10_hc3": false
+        }
+      ],
+      "most_significant_lag": {
+        "lag": 0,
+        "coef": 4733532219.987107,
+        "p_hc3": 0.15391667739621837
+      },
+      "lag_vifs": [
+        {
+          "feature": "rd_lag0",
+          "VIF": 7.348438820325971
+        },
+        {
+          "feature": "rd_lag1",
+          "VIF": 20.35507396859105
+        },
+        {
+          "feature": "rd_lag2",
+          "VIF": 65.51796092350055
+        },
+        {
+          "feature": "rd_lag3",
+          "VIF": 64.3072019860445
+        },
+        {
+          "feature": "rd_lag4",
+          "VIF": 65.87918302472099
+        },
+        {
+          "feature": "rd_lag5",
+          "VIF": 65.1381408538928
+        }
+      ],
+      "robustness": {
+        "model": "rd_lag0 + gdp_ppp_percapita",
+        "coef": 3152763813.255215,
+        "p_hc3": 3.495835573642e-05
+      }
+    }
+  }
+}

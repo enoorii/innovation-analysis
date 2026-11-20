@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-19T19:29:47.042855+00:00",
+    "target": "gii_score",
+    "target_label": "Global Innovation Index (score, 0–100)",
+    "candidate_pool": [
+      "rd_pct_gdp",
+      "rd_pct_gdp_lag1",
+      "rd_pct_gdp_lag2",
+      "log_gdp_ppp_percapita",
+      "gov_debt_pct_gdp",
+      "gini_index",
+      "hitech_pct_manufactured"
+    ],
+    "vif_threshold": 5.0,
+    "gii_year_range": {
+      "Italy": [
+        2011,
+        2025
+      ],
+      "Finland": [
+        2013,
+        2025
+      ]
+    },
+    "excluded_tautological": [
+      "patents_total",
+      "journal_articles",
+      "hitech_exports_usd"
+    ],
+    "notes": [
+      "GII is published only from 2011 (Italy) and 2013 (Finland) onward.",
+      "Italy 2024-2025 rd_pct_gdp is linearly extrapolated; Finland 2024 is interior-interpolated.",
+      "hitech_pct_manufactured is partially tautological with GII (knowledge pillar); flagged if retained.",
+      "Small sample: N=15 (Italy), N=13 (Finland). Descriptive, not causal.",
+      "RD-lag sensitivity check compares lag0 / lag1 / lag2 in isolation; the VIF-selected lag may differ."
+    ]
+  },
+  "results": {
+    "Italy": {
+      "status": "ok",
+      "n_obs": 15,
+      "final_features": [
+        "rd_pct_gdp",
+        "rd_pct_gdp_lag2",
+        "gov_debt_pct_gdp",
+        "gini_index",
+        "hitech_pct_manufactured"
+      ],
+      "surviving_rd_lag": "rd_pct_gdp",
+      "removal_history": [
+        {
+          "iteration": 1,
+          "dropped": "log_gdp_ppp_percapita",
+          "vif": 29.784013199009742,
+          "remaining": 6
+        },
+        {
+          "iteration": 2,
+          "dropped": "rd_pct_gdp_lag1",
+          "vif": 13.72199658540181,
+          "remaining": 5
+        }
+      ],
+      "vif_initial": [
+        {
+          "feature": "log_gdp_ppp_percapita",
+          "VIF": 29.784013199009742
+        },
+        {
+          "feature": "rd_pct_gdp_lag2",
+          "VIF": 15.141308398988834
+        },
+        {
+          "feature": "rd_pct_gdp_lag1",
+          "VIF": 14.411491307507085
+        },
+        {
+          "feature": "hitech_pct_manufactured",
+          "VIF": 9.769777603293525
+        },
+        {
+          "feature": "gov_debt_pct_gdp",
+          "VIF": 6.857769699474977
+        },
+        {
+          "feature": "rd_pct_gdp",
+          "VIF": 6.297592268697638
+        },
+        {
+          "feature": "gini_index",
+          "VIF": 2.5905933511757278
+        }
+      ],
+      "vif_final": [
+        {
+          "feature": "rd_pct_gdp",
+          "VIF": 4.086831274717416
+        },
+        {
+          "feature": "gov_debt_pct_gdp",
+          "VIF": 3.5319341851413815
+        },
+        {
+          "feature": "rd_pct_gdp_lag2",
+          "VIF": 3.477817317113386
+        },
+        {
+          "feature": "gini_index",
+          "VIF": 2.0328620607631263
+        },
+        {
+          "feature": "hitech_pct_manufactured",
+          "VIF": 1.6049761060328325
+        }
+      ],
+      "fit": {
+        "r_squared": 0.30369191014305574,
+        "adj_r_squared": -0.0831459175552467,
+        "aic": 63.076790779957676,
+        "bic": 67.32509198657094,
+        "f_stat": 0.7850625983245552,
+        "f_pvalue": 0.5853550172680335,
+        "dw": 1.2071727855062047,
+        "omnibus_p": 0.4664029102818661
+      },
+      "coefficients": [
+        {
+          "feature": "const",
+          "coef": 41.054776846055404,
+          "se_std": 44.73586094951713,
+          "p_std": 0.3827025510960298,
+          "se_hc3": 68.28037986904997,
+          "p_hc3": 0.5476617979264626,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "rd_pct_gdp",
+          "coef": 13.025083009623245,
+          "se_std": 12.113724828053165,
+          "p_std": 0.31024902704841134,
+          "se_hc3": 18.17533631223977,
+          "p_hc3": 0.4735993128841075,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "rd_pct_gdp_lag2",
+          "coef": -4.40265626605074,
+          "se_std": 9.402531281267295,
+          "p_std": 0.6507444078240878,
+          "se_hc3": 15.702779255986284,
+          "p_hc3": 0.7791903266684854,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "gov_debt_pct_gdp",
+          "coef": 0.02646696508404467,
+          "se_std": 0.10989342875099645,
+          "p_std": 0.8150743902311384,
+          "se_hc3": 0.19999210507885623,
+          "p_hc3": 0.894715331026518,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "gini_index",
+          "coef": -0.25225985831808556,
+          "se_std": 1.1818623195079543,
+          "p_std": 0.8357384499069461,
+          "se_hc3": 1.755117874770078,
+          "p_hc3": 0.8857151355866525,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "hitech_pct_manufactured",
+          "coef": -0.22504985138720812,
+          "se_std": 0.36134101022256976,
+          "p_std": 0.5488579603654713,
+          "se_hc3": 0.33122191444974214,
+          "p_hc3": 0.4968506332676039,
+          "sig5_std": false,
+          "sig5_hc3": false
+        }
+      ]
+    },
+    "Finland": {
+      "status": "ok",
+      "n_obs": 13,
+      "final_features": [
+        "rd_pct_gdp",
+        "rd_pct_gdp_lag2",
+        "gov_debt_pct_gdp",
+        "gini_index",
+        "hitech_pct_manufactured"
+      ],
+      "surviving_rd_lag": "rd_pct_gdp",
+      "removal_history": [
+        {
+          "iteration": 1,
+          "dropped": "rd_pct_gdp_lag1",
+          "vif": 26.609731157795096,
+          "remaining": 6
+        },
+        {
+          "iteration": 2,
+          "dropped": "log_gdp_ppp_percapita",
+          "vif": 23.473112562821726,
+          "remaining": 5
+        }
+      ],
+      "vif_initial": [
+        {
+          "feature": "rd_pct_gdp_lag1",
+          "VIF": 26.609731157795096
+        },
+        {
+          "feature": "log_gdp_ppp_percapita",
+          "VIF": 26.246864927556942
+        },
+        {
+          "feature": "rd_pct_gdp_lag2",
+          "VIF": 15.324814707567333
+        },
+        {
+          "feature": "rd_pct_gdp",
+          "VIF": 12.201497443972267
+        },
+        {
+          "feature": "gov_debt_pct_gdp",
+          "VIF": 10.18967743972283
+        },
+        {
+          "feature": "gini_index",
+          "VIF": 4.544325984646391
+        },
+        {
+          "feature": "hitech_pct_manufactured",
+          "VIF": 1.3578927052265468
+        }
+      ],
+      "vif_final": [
+        {
+          "feature": "rd_pct_gdp_lag2",
+          "VIF": 3.283499866106371
+        },
+        {
+          "feature": "rd_pct_gdp",
+          "VIF": 2.8535985928631153
+        },
+        {
+          "feature": "gov_debt_pct_gdp",
+          "VIF": 1.8829296291362392
+        },
+        {
+          "feature": "gini_index",
+          "VIF": 1.775411135894739
+        },
+        {
+          "feature": "hitech_pct_manufactured",
+          "VIF": 1.224103007501751
+        }
+      ],
+      "fit": {
+        "r_squared": 0.2953942210829793,
+        "adj_r_squared": -0.20789562100060688,
+        "aic": 50.85888505091407,
+        "bic": 54.248581195683286,
+        "f_stat": 0.5869266501784876,
+        "f_pvalue": 0.7116462003887801,
+        "dw": 2.5571182239910883,
+        "omnibus_p": 0.5932689380172429
+      },
+      "coefficients": [
+        {
+          "feature": "const",
+          "coef": 103.21805313470337,
+          "se_std": 55.8463682569733,
+          "p_std": 0.10704159885762549,
+          "se_hc3": 84.66240344422978,
+          "p_hc3": 0.2227788209887821,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "rd_pct_gdp",
+          "coef": -0.059865961587406806,
+          "se_std": 3.9338985387091134,
+          "p_std": 0.9882829378805034,
+          "se_hc3": 3.9635601099021613,
+          "p_hc3": 0.9879491394023329,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "rd_pct_gdp_lag2",
+          "coef": 0.7272639529949279,
+          "se_std": 2.8293490103755,
+          "p_std": 0.8045373970682621,
+          "se_hc3": 4.2710666844857865,
+          "p_hc3": 0.8647923847716652,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "gov_debt_pct_gdp",
+          "coef": -0.03653986228300292,
+          "se_std": 0.07754735490534079,
+          "p_std": 0.6518336548905302,
+          "se_hc3": 0.09107377228537966,
+          "p_hc3": 0.688264273213216,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "gini_index",
+          "coef": -1.5011080189746153,
+          "se_std": 1.8417579364779624,
+          "p_std": 0.4418926053152575,
+          "se_hc3": 3.0488934608929825,
+          "p_hc3": 0.6224753416569089,
+          "sig5_std": false,
+          "sig5_hc3": false
+        },
+        {
+          "feature": "hitech_pct_manufactured",
+          "coef": -0.2533744348161142,
+          "se_std": 1.0374565925568975,
+          "p_std": 0.8140592482034013,
+          "se_hc3": 0.9364760007317271,
+          "p_hc3": 0.7867282417434646,
+          "sig5_std": false,
+          "sig5_hc3": false
+        }
+      ]
+    }
+  },
+  "rd_lag_sensitivity": {
+    "Italy": {
+      "rd_pct_gdp": {
+        "status": "ok",
+        "n_obs": 15,
+        "r_squared": 0.2874067141168022,
+        "adj_r_squared": -0.1084784447071967,
+        "aic": 63.423569943414606,
+        "bic": 67.67187115002787,
+        "rd_coef": 11.3936186118543,
+        "rd_p_hc3": 0.49547440292038747
+      },
+      "rd_pct_gdp_lag1": {
+        "status": "ok",
+        "n_obs": 15,
+        "r_squared": 0.2494324690973101,
+        "adj_r_squared": -0.16754949251529538,
+        "aic": 64.2023519001194,
+        "bic": 68.45065310673264,
+        "rd_coef": -8.800994672821773,
+        "rd_p_hc3": 0.7098153680514381
+      },
+      "rd_pct_gdp_lag2": {
+        "status": "ok",
+        "n_obs": 15,
+        "r_squared": 0.2948062493965834,
+        "adj_r_squared": -0.0969680564942037,
+        "aic": 63.2669963055881,
+        "bic": 67.51529751220136,
+        "rd_coef": -16.286685711847724,
+        "rd_p_hc3": 0.6164440915934186
+      }
+    },
+    "Finland": {
+      "rd_pct_gdp": {
+        "status": "ok",
+        "n_obs": 13,
+        "r_squared": 0.3607408250519415,
+        "adj_r_squared": -0.09587287133952871,
+        "aic": 49.59361454014761,
+        "bic": 52.98331068491683,
+        "rd_coef": 0.670214685232052,
+        "rd_p_hc3": 0.8026525859818636
+      },
+      "rd_pct_gdp_lag1": {
+        "status": "ok",
+        "n_obs": 13,
+        "r_squared": 0.39179144271945354,
+        "adj_r_squared": -0.04264324105236539,
+        "aic": 48.94631695735144,
+        "bic": 52.33601310212066,
+        "rd_coef": 1.4041044588049205,
+        "rd_p_hc3": 0.6364867000230412
+      },
+      "rd_pct_gdp_lag2": {
+        "status": "ok",
+        "n_obs": 13,
+        "r_squared": 0.4306203616518034,
+        "adj_r_squared": 0.023920619974520108,
+        "aic": 48.08870135923722,
+        "bic": 51.47839750400644,
+        "rd_coef": 1.8649940832280343,
+        "rd_p_hc3": 0.6170130985598855
+      }
+    }
+  }
+}
