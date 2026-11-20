@@ -10,6 +10,7 @@ dist/
 wheels/
 *.egg-info/
 images/
+!docs/images
 
 # Virtual environments
 .venv/

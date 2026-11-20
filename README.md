@@ -1,3 +1,39 @@
+<h1 align="center">
+  Innovation Atlas
+</h1>
+
+<p align="center">
+  A comparative innovation-economy dashboard for Italy × Finland (2004–2025) with a FastAPI + ChromaDB RAG backend and a React + TypeScript dashboard — eleven indicators with annotated shock events, three statistical analyses (VIF regression, distributed lag, GII drivers), and an AI analyst that answers from the analysis notes with source citations.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/FastAPI-Async%20API-009688?style=for-the-badge&logo=fastapi">
+  <img src="https://img.shields.io/badge/Granian-ASGI%20Server-B7410E?style=for-the-badge&logo=rust">
+  <img src="https://img.shields.io/badge/ChromaDB-Vector%20Store-FFCA28?style=for-the-badge">
+  <img src="https://img.shields.io/badge/OpenAI--Compatible-RAG-412991?style=for-the-badge&logo=openai">
+  <img src="https://img.shields.io/badge/statsmodels-Econometrics-2C5AA0?style=for-the-badge">
+  <img src="https://img.shields.io/badge/pandas-Data%20Pipeline-150458?style=for-the-badge&logo=pandas">
+  <img src="https://img.shields.io/badge/Jupyter-Analysis%20Notebook-F37626?style=for-the-badge&logo=jupyter">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/TypeScript-7.x-3178C6?style=for-the-badge&logo=typescript">
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite">
+  <img src="https://img.shields.io/badge/Tailwind-v4-38B2AC?style=for-the-badge&logo=tailwindcss">
+  <img src="https://img.shields.io/badge/shadcn%2Fui-Base%20UI-black?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Recharts-Charts-22B5BF?style=for-the-badge">
+  <img src="https://img.shields.io/badge/TanStack%20Query-Server%20State-FF4154?style=for-the-badge&logo=reactquery">
+  <img src="https://img.shields.io/badge/pnpm-Package%20Manager-F69220?style=for-the-badge&logo=pnpm">
+  <img src="https://img.shields.io/badge/uv-Python%20Toolchain-DE5FE9?style=for-the-badge&logo=uv">
+</p>
+
+<p align="center">
+  <img src="docs/images/dashboard.webp" alt="Innovation Atlas dashboard — Italy × Finland indicator explorer with shock-event annotations" width="850" style="border-radius: 12px;">
+</p>
+
+<p align="center">
+  <img src="docs/images/analysis-assistant.webp" alt="AI analyst chat answering from the analysis notes with retrieved sources" width="850" style="border-radius: 12px;">
+</p>
+
 # Innovation Atlas — Italy × Finland, 2004–2025
 
 A comparative dashboard on economic factors and innovation output: 11 indicators,
