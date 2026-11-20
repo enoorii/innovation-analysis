@@ -89,7 +89,7 @@ export function Markdown({ text }: { text: string }) {
           {items.map((it, j) => (
             <li key={j} className="flex gap-2">
               <span
-                className="mt-[7px] size-1 shrink-0 rounded-full bg-finland"
+                className="mt-1.75 size-1 shrink-0 rounded-full bg-finland"
                 aria-hidden
               />
               <span>{inline(it, `ul${k}-${j}`)}</span>

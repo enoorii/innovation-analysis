@@ -274,7 +274,7 @@ export function ChatDock() {
                   </TooltipTrigger>
                   <TooltipContent
                     side="bottom"
-                    className="max-w-[240px] text-xs"
+                    className="max-w-60 text-xs"
                   >
                     Session {chat.sessionId}. Persists across refreshes; Reset
                     clears backend memory and mints a new id.
@@ -446,7 +446,7 @@ export function ChatDock() {
                 }}
                 placeholder="Ask about the data, the models, the caveats…"
                 rows={1}
-                className="max-h-[120px] min-h-[42px] resize-none text-sm"
+                className="max-w-30 min-h-10.5 resize-none text-sm"
                 aria-label="Chat message"
               />
               {chat.sending ? (

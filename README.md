@@ -165,7 +165,8 @@ or on a fresh checkout without `chroma_db`:
 
 ```bash
 cd backend
-uv run python scripts/ingest_knowledge.py
+uv run python scripts/ingest_knowledge.py            # update: re-embeds only changed/new files
+uv run python scripts/ingest_knowledge.py --rebuild  # full rebuild
 ```
 
 (or `./run.sh --ingest`, or `POST /ingest?rebuild=true`). Requires a valid API

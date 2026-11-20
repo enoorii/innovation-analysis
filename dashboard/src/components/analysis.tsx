@@ -191,7 +191,7 @@ export function FitChips({ fit, n }: { fit: FitStats; n: number }) {
                 {it.value}
               </div>
             </TooltipTrigger>
-            <TooltipContent className="max-w-[240px] text-xs">
+            <TooltipContent className="max-w-60 text-xs">
               {it.hint}
             </TooltipContent>
           </Tooltip>
